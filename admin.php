@@ -27,6 +27,21 @@ if (!isset($_SESSION['username'])) {
     crossorigin="anonymous"
     /> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>  
+        html {
+            position: relative;
+            min-height: 460px;
+        }
+        body {
+            margin-bottom: 100px; /* Margin bottom by footer height */
+        }
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 150px; /* Set the fixed height of the footer here */ 
+        }
+    </style>
 </head>
 <body>
     <!-- nav begin -->
