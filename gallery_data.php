@@ -4,7 +4,7 @@
                         <th>No</th>
                         <th class="w-25">Tanggal</th>
                         <th class="w-75">Gambar</th>
-                        <th class="w-45">Aksi</th>
+                        <th class="w-50">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -12,7 +12,7 @@
                     include "koneksi.php";
                     
                     $hlm = (isset($_POST['hlm'])) ? $_POST['hlm'] : 1;
-                    $limit = 3;
+                    $limit = 6;
                     $limit_start = ($hlm - 1) * $limit;
                     $no = $limit_start + 1;
 
@@ -56,7 +56,7 @@
                     <div class="mb-3">
                         <label for="formGroupExampleInput" class="form-label">Tanggal</label>
                         <input type="hidden" name="id" value="<?= $row["id"] ?>">
-                        <input type="text" class="form-control" name="tanggal" placeholder="Masukkan Tanggal" value="<?= $row["tanggal"] ?>" required>
+                        <input type="text" class="form-control" name="Tanggal" value="<?= $row["tanggal"] ?>" required>
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Ganti Gambar</label>
@@ -97,7 +97,7 @@
             <form method="post" action="" enctype="multipart/form-data">
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label for="formGroupExampleInput" class="form-label">Yakin akan menghapus gallery "<strong><?= $row["tanggal"] ?></strong>"?</label>
+                        <label for="formGroupExampleInput" class="form-label">Yakin akan menghapus gallery"<strong><?= $row["tanggal"] ?></strong>"?</label>
                         <input type="hidden" name="id" value="<?= $row["id"] ?>">
                         <input type="hidden" name="gambar" value="<?= $row["gambar"] ?>">
                     </div>
@@ -124,7 +124,7 @@ $sql1 = "SELECT * FROM gallery";
 $hasil1 = $conn->query($sql1); 
 $total_records = $hasil1->num_rows;
 ?>
-<p>Total gallery : <?php echo $total_records; ?></p>
+<p>Total article : <?php echo $total_records; ?></p>
 <nav class="mb-2">
     <ul class="pagination justify-content-end">
     <?php
