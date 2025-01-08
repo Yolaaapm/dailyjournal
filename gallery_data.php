@@ -96,8 +96,8 @@
             <form method="post" action="" enctype="multipart/form-data">
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label for="formGroupExampleInput" class="form-label">Yakin akan menghapus gallery "<?= $row["tanggal"] ?>
-                        <br><?= $row["username"] ?>"</label>
+                        <label for="formGroupExampleInput" class="form-label">Yakin akan menghapus gallery "<?= $row["tanggal"] ?>"
+                        <br>"<?= $row["username"] ?>"</label>
                         <input type="hidden" name="id" value="<?= $row["id"] ?>">
                         <input type="hidden" name="gambar" value="<?= $row["gambar"] ?>">
                     </div>
@@ -124,7 +124,7 @@ $sql1 = "SELECT * FROM gallery";
 $hasil1 = $conn->query($sql1); 
 $total_records = $hasil1->num_rows;
 ?>
-<p>Total article : <?php echo $total_records; ?></p>
+<p>Total gallery : <?php echo $total_records; ?></p>
 <nav class="mb-2">
     <ul class="pagination justify-content-end">
     <?php
