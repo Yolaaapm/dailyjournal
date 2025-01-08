@@ -18,10 +18,7 @@
             </div>
             <form method="post" action="" enctype="multipart/form-data">
                 <div class="modal-body">
-                    <div class="mb-3">
-                        <label for="formGroupExampleInput" class="form-label">Tanggal</label>
-                        <input type="text" class="form-control" name="tanggal">
-                    </div>
+                    
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Gambar</label>
                         <input type="file" class="form-control" name="gambar">
