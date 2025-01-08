@@ -102,14 +102,14 @@ if (isset($_POST['simpan'])) {
                                 gambar = ?
                                 WHERE id = ?");
 
-        $stmt->bind_param("ssssi", $tanggal, $tanggal, $username, $gambar, $id);
+        $stmt->bind_param("ssssi", $tanggal, $username, $gambar, $id);
         $simpan = $stmt->execute();
     } else {
 		    //insert data
         $stmt = $conn->prepare("INSERT INTO gallery (tanggal,tanggal,username,gambar)
                                 VALUES (?,?,?,?)");
 
-        $stmt->bind_param("ssss", $tanggal, $tanggal, $username, $gambar);
+        $stmt->bind_param("ssss", $tanggal, $username, $gambar);
         $simpan = $stmt->execute();
     }
 
