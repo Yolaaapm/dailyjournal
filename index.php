@@ -281,13 +281,13 @@ include "koneksi.php";
     <footer id="footer" class="text-center p-5">
       <div>
         <a href="https://www.instagram.com/fiolaa09?igsh=d25pMGxtaDQ4Ym8x&utm_source=qr"
-          ><i class="bi bi-instagram h2 p-2"></i
+          ><i class="bi bi-instagram h2 p-2 text-dark"></i
         ></a>
         <a href="https://youtube.com/@fiolaputrim?feature=sharedl"
-          ><i class="bi bi-youtube h2 p-2"></i
+          ><i class="bi bi-youtube h2 p-2 text-dark"></i
         ></a>
         <a href="https://wa.me/+6285647355825"
-          ><i class="bi bi-whatsapp h2 p-2"></i
+          ><i class="bi bi-whatsapp h2 p-2 text-dark"></i
         ></a>
       </div>
       <div>Fiola Putri Monika &copy; 2024</div>
