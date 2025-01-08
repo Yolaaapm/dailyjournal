@@ -16,7 +16,7 @@
                     $limit_start = ($hlm - 1) * $limit;
                     $no = $limit_start + 1;
 
-                    $sql = "SELECT * FROM article ORDER BY tanggal DESC LIMIT $limit_start, $limit";
+                    $sql = "SELECT * FROM gallery ORDER BY tanggal DESC LIMIT $limit_start, $limit";
                     $hasil = $conn->query($sql);
 
                     while ($row = $hasil->fetch_assoc()) {
@@ -24,7 +24,7 @@
                         <tr>
                             <td><?= $no++ ?></td>
                             <td>
-                                <br>pada : <?= $row["tanggal"] ?>
+                                pada : <?= $row["tanggal"] ?>
                                 <br>oleh : <?= $row["username"] ?>
                             </td>
                             <td>
