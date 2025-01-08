@@ -98,7 +98,6 @@ if (isset($_POST['simpan'])) {
         $stmt = $conn->prepare("UPDATE gallery 
                                 SET 
                                 tanggal = ?,
-                                tanggal = ?,
                                 username = ?,
                                 gambar = ?
                                 WHERE id = ?");
