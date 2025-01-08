@@ -20,7 +20,7 @@
                 <div class="modal-body">
                     <div class="mb-3">
                         <label for="formGroupExampleInput" class="form-label">Tanggal</label>
-                        <input type="text" class="form-control" name="tanggal" placeholder="Masukkan Tanggal" required>
+                        <input type="text" class="form-control" name="tanggal">
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Gambar</label>
@@ -42,11 +42,11 @@ $(document).ready(function(){
     load_data();
     function load_data(hlm){
         $.ajax({
-            url : "article_data.php",
+            url : "gallery_data.php",
             method : "POST",
             data : {hlm:hlm},
             success : function(data){
-                    $('#article_data').html(data);
+                    $('#gallery_data').html(data);
             }
         })
     } 
@@ -63,6 +63,7 @@ include "upload_foto.php";
 
 //jika tombol simpan diklik
 if (isset($_POST['simpan'])) {
+    $tanggal = $_POST['tanggal'];
     $tanggal = date("Y-m-d H:i:s");
     $username = $_SESSION['username'];
     $gambar = '';
@@ -98,18 +99,19 @@ if (isset($_POST['simpan'])) {
         $stmt = $conn->prepare("UPDATE gallery 
                                 SET 
                                 tanggal = ?,
-                                username = ?
+                                tanggal = ?,
+                                username = ?,
                                 gambar = ?
                                 WHERE id = ?");
 
-        $stmt->bind_param("sssi", $tanggal, $username, $gambar, $id);
+        $stmt->bind_param("ssssi", $tanggal, $tanggal, $username, $gambar, $id);
         $simpan = $stmt->execute();
     } else {
 		    //insert data
-        $stmt = $conn->prepare("INSERT INTO gallery (tanggal,username,gambar)
-                                VALUES (?,?,?)");
+        $stmt = $conn->prepare("INSERT INTO gallery (tanggal,tanggal,username,gambar)
+                                VALUES (?,?,?,?)");
 
-        $stmt->bind_param("sss", , $tanggal, $username, $gambar);
+        $stmt->bind_param("ssss", $tanggal, $tanggal, $username, $gambar);
         $simpan = $stmt->execute();
     }
 
