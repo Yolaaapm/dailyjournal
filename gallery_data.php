@@ -24,7 +24,7 @@
                         <tr>
                             <td><?= $no++ ?></td>
                             <td>
-                                <strong><?= $row["tanggal"] ?></strong>
+                                <strong><?= $row[""] ?></strong>
                                 <br>pada : <?= $row["tanggal"] ?>
                                 <br>oleh : <?= $row["username"] ?>
                             </td>
