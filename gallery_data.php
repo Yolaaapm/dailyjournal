@@ -4,7 +4,7 @@
                         <th>No</th>
                         <th class="w-25">Tanggal</th>
                         <th class="w-75">Gambar</th>
-                        <th class="w-35">Aksi</th>
+                        <th class="w-45">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
