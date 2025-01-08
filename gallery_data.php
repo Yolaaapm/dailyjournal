@@ -96,7 +96,7 @@
             <form method="post" action="" enctype="multipart/form-data">
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label for="formGroupExampleInput" class="form-label">Yakin akan menghapus gallery"<strong><?= $row["tanggal"] ?></strong>"?</label>
+                        <label for="formGroupExampleInput" class="form-label">Yakin akan menghapus gallery"</label>
                         <input type="hidden" name="id" value="<?= $row["id"] ?>">
                         <input type="hidden" name="gambar" value="<?= $row["gambar"] ?>">
                     </div>
