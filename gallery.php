@@ -18,7 +18,7 @@
             </div>
             <form method="post" action="" enctype="multipart/form-data">
                 <div class="modal-body">
-                    
+
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Gambar</label>
                         <input type="file" class="form-control" name="gambar">
@@ -128,6 +128,8 @@ if (isset($_POST['simpan'])) {
 
 //jika tombol hapus diklik
 if (isset($_POST['hapus'])) {
+    $tanggal = date("Y-m-d H:i:s");
+    $username = $_SESSION['username'];
     $id = $_POST['id'];
     $gambar = $_POST['gambar'];
 
