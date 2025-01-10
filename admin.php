@@ -78,10 +78,7 @@ if (!isset($_SESSION['username'])) {
                     <?= $_SESSION['username']?>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="profil.php">Profil fio</a></li> 
-                    <li class="nav-item">
-                <a class="nav-link" href="admin.php?page=profil">Profil fio</a>
-            </li> 
+                    <li><a class="dropdown-item" href="profil.php" href="admin.php?page=profil">Profil fio</a></li> 
                     <li><a class="dropdown-item" href="logout.php">Logout</a></li> 
                 </ul>
             </li> 
