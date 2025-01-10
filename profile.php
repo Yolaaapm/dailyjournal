@@ -44,6 +44,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     exit();
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil User</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>My Daily Journal</h1>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Article</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Homepage</a></li>
+            </ul>
+            <div>
+                <span>Profile: <?= htmlspecialchars($user["username"]) ?></span>
+                <a href="logout.php">Logout</a>
+            </div>
+        </nav>
+    </header>
     <main>
         <section class="profile">
             <h2>Profil</h2>
