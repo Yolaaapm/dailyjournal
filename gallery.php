@@ -128,8 +128,6 @@ if (isset($_POST['simpan'])) {
 
 //jika tombol hapus diklik
 if (isset($_POST['hapus'])) {
-    $tanggal = date("Y-m-d H:i:s");
-    $username = $_SESSION['username'];
     $id = $_POST['id'];
     $gambar = $_POST['gambar'];
 
