@@ -131,30 +131,6 @@ include "koneksi.php";
     <!-- gallery begin -->
     <section id="gallery" class="text-center p-5 bg-danger-subtle">
       <div class="container">
-      <?php
-// Koneksi ke database
-$mysqli = new mysqli("localhost", "username", "password", "database_name");
-if ($mysqli->connect_error) {
-    die("Connection failed: " . $mysqli->connect_error);
-}
-
-// Ambil data dari database
-$sql = "SELECT * FROM gallery ORDER BY created_at DESC";
-$result = $mysqli->query($sql);
-
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        echo '<div class="gallery-item">';
-        echo '<img src="' . htmlspecialchars($row['image_url']) . '" alt="' . htmlspecialchars($row['title']) . '">';
-        echo '</div>';
-    }
-} else {
-    echo '<p>No images available.</p>';
-}
-
-$mysqli->close();
-?>
-
         <h1 class="fw-bold display-4 pb-3">Gallery</h1>
         <div id="carouselExample" class="carousel slide">
           <div class="carousel-inner">
