@@ -44,8 +44,11 @@ if (!isset($_SESSION['username'])) {
     </style>
 </head>
 <body>
-    <!-- nav begin -->
-    <nav class="navbar navbar-expand-sm bg-body-tertiary sticky-top bg-danger-subtle">
+<?php
+if (!isset($_GET['page']) || $_GET['page'] !== 'homepage') {
+?>
+<!-- nav begin -->
+<nav class="navbar navbar-expand-sm bg-body-tertiary sticky-top bg-danger-subtle">
     <div class="container">
         <a class="navbar-brand" href=".">My Daily Journal</a>
         <button
@@ -85,8 +88,12 @@ if (!isset($_SESSION['username'])) {
         </ul>
         </div>
     </div>
-    </nav>
-    <!-- nav end -->
+</nav>
+<!-- nav end -->
+<?php
+}
+?>
+
     <!-- content begin -->
     <section id="content" class="p-5">
     <div class="container">
