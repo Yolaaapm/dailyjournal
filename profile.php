@@ -118,7 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <form method="POST" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="password_baru" class="form-label">Ganti Password</label>
-                <input type="password" class="form-control" name="password_baru" placeholder="Masukkan password baru jika ingin mengubah">
+                <input type="password" class="form-control" name="password_baru" placeholder="Tuliskan Password Baru Jika Ingin Mengganti Password Saja">
             </div>
             <div class="mb-3">
                 <label for="foto" class="form-label">Ganti Foto Profil</label>
