@@ -137,7 +137,7 @@ include "koneksi.php";
     <h1 class="fw-bold display-4 pb-3">Gallery</h1>
     <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
       <?php
-      $sql = "SELECT * FROM article ORDER BY tanggal DESC";
+      $sql = "SELECT * FROM gallery ORDER BY tanggal DESC";
       $hasil = $conn->query($sql); 
 
       while($row = $hasil->fetch_assoc()){
