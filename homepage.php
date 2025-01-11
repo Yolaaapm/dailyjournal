@@ -52,6 +52,9 @@ include "koneksi.php";
             <li class="nav-item">
               <a class="nav-link" href="#aboutme">About Me</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.php" target="_blank">Login</a>
+            </li>
             <button
               type="button"
               class="btn btn-dark theme"
@@ -274,23 +277,6 @@ include "koneksi.php";
       </div>
     </section>
     <!-- about me end -->
-    <!-- footer begin -->
-    <footer id="footer" class="text-center p-5">
-      <div>
-        <a href="https://www.instagram.com/fiolaa09?igsh=d25pMGxtaDQ4Ym8x&utm_source=qr"
-          ><i class="bi bi-instagram h2 p-2 text-dark"></i
-        ></a>
-        <a href="https://youtube.com/@fiolaputrim?feature=sharedl"
-          ><i class="bi bi-youtube h2 p-2 text-dark"></i
-        ></a>
-        <a href="https://wa.me/+6285647355825"
-          ><i class="bi bi-whatsapp h2 p-2 text-dark"></i
-        ></a>
-      </div>
-      <div>Fiola Putri Monika &copy; 2024</div>
-    </footer>
-    <!-- footer end -->
-
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
