@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             position: absolute;
             bottom: 0;
             width: 100%;
-            height: 110px; /* Set the fixed height of the footer here */ 
+            height: 100px; /* Set the fixed height of the footer here */ 
         }
     </style>
 </head>
