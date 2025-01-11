@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <!-- nav begin -->
     <nav class="navbar navbar-expand-sm bg-body-tertiary sticky-top bg-danger-subtle">
     <div class="container">
-        <a class="navbar-brand" target="_blank" href=".">My Daily Journal</a>
+        <a class="navbar-brand" href=".">My Daily Journal</a>
         <button
         class="navbar-toggler"
         type="button"
@@ -87,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-dark">
-        <li class="nav-item">
+            <li class="nav-item">
                 <a class="nav-link" href="admin.php?page=dashboard">Dashboard</a>
             </li>
             <li class="nav-item">
@@ -96,12 +96,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <li class="nav-item">
                 <a class="nav-link" href="admin.php?page=gallery">Gallery</a>
             </li> 
+            <li class="nav-item">
+                <b><a class="nav-link" href="admin.php?page=homepage">Homepage</a></b>
+            </li> 
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-danger fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <?= $_SESSION['username']?>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="profil.php">Profil fio</a></li> 
+                    <li><a class="dropdown-item" href="profil.php">Profile fio</a></li> 
                     <li><a class="dropdown-item" href="logout.php">Logout</a></li> 
                 </ul>
             </li> 
