@@ -132,49 +132,39 @@ include "koneksi.php";
 </section>
 <!-- article end -->
     <!-- gallery begin -->
-    <section id="gallery" class="text-center p-5 bg-danger-subtle">
-      <div class="container">
-        <h1 class="fw-bold display-4 pb-3">Gallery</h1>
-        <div id="carouselExample" class="carousel slide">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="..." />
+<section id="gallery" class="text-center p-5">
+  <div class="container">
+    <h1 class="fw-bold display-4 pb-3">Gallery</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+      <?php
+      $sql = "SELECT * FROM article ORDER BY tanggal DESC";
+      $hasil = $conn->query($sql); 
+
+      while($row = $hasil->fetch_assoc()){
+      ?>
+        <div class="col">
+          <div class="card h-100">
+            <img src="img/<?= $row["gambar"]?>" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title"><?= $row["judul"]?></h5>
+              <p class="card-text">
+                <?= $row["tanggal"]?>
+              </p>
             </div>
-            <div class="carousel-item">
-              <img src="https://images.unsplash.com/photo-1547238899-b5fcc6adf701?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fHw%3D" class="d-block w-100" alt="..." />
-            </div>
-            <div class="carousel-item">
-              <img src="https://images.unsplash.com/photo-1474181487882-5abf3f0ba6c2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGRyYW1hJTIwY2hpbmF8ZW58MHx8MHx8fDA%3D" class="d-block w-100" alt="..." />
-            </div>
-            <div class="carousel-item">
-              <img src="https://images.unsplash.com/photo-1566132127166-5d5292c26adc?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="..." />
-            </div>
-            <div class="carousel-item">
-              <img src="https://images.unsplash.com/photo-1488561092521-fa6b563f76c7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fGRyYW1hJTIwY2hpbmF8ZW58MHx8MHx8fDA%3D" class="d-block w-100" alt="..." />
+            <div class="card-footer">
+              <small class="text-body-secondary">
+                <?= $row["gambar"]?>
+              </small>
             </div>
           </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExample"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExample"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
-      </div>
-    </section>
-    <!-- gallery end -->
+        <?php
+      }
+      ?> 
+    </div>
+  </div>
+</section>
+<!-- gallery end -->
     <!-- schedule begin -->
     <section id="schedule" class="text-center p-5">
       <div class="container">
