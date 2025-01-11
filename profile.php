@@ -87,12 +87,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-dark">
-            <li class="nav-item">
+        <li class="nav-item">
                 <a class="nav-link" href="admin.php?page=dashboard">Dashboard</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="
-                admin.php?page=article">Article</a>
+                <a class="nav-link" href="admin.php?page=article">Article</a>
             </li> 
             <li class="nav-item">
                 <a class="nav-link" href="admin.php?page=gallery">Gallery</a>
@@ -102,9 +101,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <?= $_SESSION['username']?>
                 </a>
                 <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="profil.php">Profil fio</a></li> 
                     <li><a class="dropdown-item" href="logout.php">Logout</a></li> 
-                    <li><a class="dropdown-item" href="profile.php">Profile</a></li>
-                    
                 </ul>
             </li> 
         </ul>
