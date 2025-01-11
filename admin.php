@@ -88,15 +88,18 @@ if (!isset($_SESSION['username'])) {
     </nav>
     <!-- nav end -->
     <!-- content begin -->
-<section id="content" class="p-5">
+    <section id="content" class="p-5">
     <div class="container">
         <?php
-        if(isset($_GET['page'])){
+        if (isset($_GET['page'])) {
+            // Periksa apakah judul adalah "homepage"
+            if ($_GET['page'] !== 'homepage') {
         ?>
-            <h4 class="lead display-6 pb-2 border-bottom border-danger-subtle"><?= ucfirst($_GET['page'])?></h4>
-            <?php
-            include($_GET['page'].".php");
-        }else{
+                <h4 class="lead display-6 pb-2 border-bottom border-danger-subtle"><?= ucfirst($_GET['page']) ?></h4>
+        <?php
+            }
+            include($_GET['page'] . ".php");
+        } else {
         ?>
             <h4 class="lead display-6 pb-2 border-bottom border-danger-subtle">Dashboard</h4>
             <?php
@@ -105,6 +108,7 @@ if (!isset($_SESSION['username'])) {
         ?>
     </div>
 </section>
+
 <!-- content end -->
     <!-- footer begin -->
     <footer class="text-center p-5 bg-danger-subtle footer fixed-bottom">
