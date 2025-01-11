@@ -283,8 +283,8 @@ include "koneksi.php";
         <a href="https://www.instagram.com/fiolaa09?igsh=d25pMGxtaDQ4Ym8x&utm_source=qr"
           ><i class="bi bi-instagram h2 p-2 text-dark"></i
         ></a>
-        <a href="https://youtube.com/@fiolaputrim?feature=sharedl"
-          ><i class="bi bi-youtube h2 p-2 text-dark"></i
+        <a href="https://twitter.com/udinusofficial"
+          ><i class="bi bi-twitter h2 p-2 text-dark"></i
         ></a>
         <a href="https://wa.me/+6285647355825"
           ><i class="bi bi-whatsapp h2 p-2 text-dark"></i
