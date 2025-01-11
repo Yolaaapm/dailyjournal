@@ -117,8 +117,8 @@ if (!isset($_GET['page']) || $_GET['page'] !== 'homepage') {
 </section>
 
 <!-- content end -->
-    <!-- footer begin -->
-    <footer class="text-center p-5 bg-danger-subtle footer fixed-bottom">
+<!-- footer begin -->
+<footer class="text-center p-5 bg-danger-subtle footer fixed-bottom">
     <div>
         <a href="https://www.instagram.com/fiolaa09?igsh=d25pMGxtaDQ4Ym8x&utm_source=qr"
         ><i class="bi bi-instagram h2 p-2 text-dark"></i
